@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
+    <title>ONE - Decodificador</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./assets/logo.svg" alt="logo alura" >
+        </header>
+        <div class="input-cointainer">
+            <div class="input-content">
+                <textarea placeholder="Insira algo"></textarea>
+                <p class="warning"><img src="./assets/alert.svg" alt="icone redondo com exclamação">Apenas letras minúsculas e sem assento</p>
+            </div>
+            <div class="button-container">
+                <button class="criptografar" onclick="criptografar()">Criptografar</button>
+                <button class="descriptografar" onclick="descriptografar()">Descriptografar</button>
+            </div>
+        </div>
+        <div class="output-container">
+            <div class="empty-output-message">
+                <img class="empty-output-image" src="./assets/where.svg" alt="pessoa segurando lupa">
+                <div class="empty-output-text">
+                    <p>Nenhuma mensagem encontrada</p>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+            </div>
+            <div class="output-message hide">
+                <p></p>
+                <button onclick="copiarTexto()">Copiar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

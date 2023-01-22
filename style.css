@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.hide {
+    display: none !important;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #E5E5E5;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 4fr;
+    column-gap: 80px;
+    padding: 40px 60px;
+    min-height: 100vh;
+}
+
+header > * {
+    display: block;
+    margin-inline: auto;
+}
+
+.input-cointainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.input-cointainer textarea{
+    width: 100%;
+    min-height: 400px;
+    border: none;
+    background-color: #E5E5E5;
+    resize: vertical;
+    font-size: 32px;
+    color: #0A3871
+}
+
+.input-cointainer textarea:focus-visible {
+    outline: none
+}
+
+textarea::placeholder {
+    color: #0A3871
+}
+
+.output-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    border-radius: 25px;
+    gap: 40px;
+    padding: 20px;
+    font-size: 24px;
+    min-width: 230px;
+}
+
+.output-container * {
+    width: 100%;
+}
+
+.warning {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    border-radius: 15px;
+    padding-block: 15px;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-container > * {
+    width: clamp(150px, 50%, 300px);
+}
+
+.criptografar {
+    background-color: #0A3871;
+    color: white;
+}
+
+.output-container > .output-message {
+    height: 100%;
+    margin-block: 20px;
+}
+
+.output-message {
+    word-wrap: break-word;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.empty-output-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-output-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.empty-output-text > :nth-child(1) {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.empty-output-text > :nth-child(2) {
+    font-size: 16px;
+}
+
+@media(max-width: 45rem) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 40px;
+        padding: 20px;
+    }
+
+    header > * {
+        display: block;
+        margin-inline: unset;
+    }
+
+    .input-content > textarea {
+        min-height: 300px;
+        height: max-content;
+        overflow: visible;
+    }
+
+    .button-container > * {
+        width: 100%;
+    }
+
+    .output-container > img {
+        display: none
+    }
+
+    .empty-output-image {
+        display: none;
+    }
+}
+
+@media(max-width: 35rem) {
+    .button-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
